@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BookCell" customModule="Library" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="empty_cover" translatesAutoresizingMaskIntoConstraints="NO" id="vnA-ZA-d0U">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="171"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="MCD-so-5Hh"/>
+                        <constraint firstAttribute="height" constant="171" id="uUU-DZ-9hl"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7X-3H-0oW">
+                    <rect key="frame" x="0.0" y="197" width="150" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.95034247636795044" green="0.90776056051254272" blue="0.78215450048446655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vnA-ZA-d0U" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Ky6-9h-vn8"/>
+                <constraint firstItem="v7X-3H-0oW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MlD-kS-dQZ"/>
+                <constraint firstItem="v7X-3H-0oW" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="PFu-nK-w11"/>
+                <constraint firstItem="vnA-ZA-d0U" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QBP-L0-ieo"/>
+                <constraint firstItem="v7X-3H-0oW" firstAttribute="top" secondItem="vnA-ZA-d0U" secondAttribute="bottom" constant="15" id="dGE-W1-RAX"/>
+                <constraint firstItem="vnA-ZA-d0U" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uQt-jN-tLf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="coverImageView" destination="vnA-ZA-d0U" id="JMh-YB-TdA"/>
+                <outlet property="nameLabel" destination="v7X-3H-0oW" id="2tr-TO-PNW"/>
+            </connections>
+            <point key="canvasLocation" x="1" y="-95"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="empty_cover" width="256" height="256"/>
+    </resources>
+</document>

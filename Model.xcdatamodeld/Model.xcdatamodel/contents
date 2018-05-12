@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Book" representedClassName="Book" syncable="YES" codeGenerationType="class">
+        <attribute name="author" optional="YES" syncable="YES"/>
+        <attribute name="cover" optional="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="publishing_office" optional="YES" syncable="YES"/>
+        <attribute name="status" optional="YES" syncable="YES"/>
+        <attribute name="subject" optional="YES" syncable="YES"/>
+        <attribute name="volume" optional="YES" syncable="YES"/>
+    </entity>
+    <entity name="Book_User" representedClassName="Book_User" syncable="YES" codeGenerationType="class">
+        <attribute name="book_id" optional="YES" syncable="YES"/>
+        <attribute name="user_email" optional="YES" syncable="YES"/>
+        <relationship name="to_book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" syncable="YES"/>
+        <relationship name="to_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="bookedBooks" optional="YES" syncable="YES"/>
+        <attribute name="email" optional="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="passportNumber" optional="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" syncable="YES"/>
+        <attribute name="patronimyc" optional="YES" syncable="YES"/>
+        <attribute name="phone" optional="YES" syncable="YES"/>
+        <attribute name="position" optional="YES" syncable="YES"/>
+        <attribute name="surname" optional="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Book" positionX="-189" positionY="-18" width="128" height="165"/>
+        <element name="User" positionX="223" positionY="-18" width="128" height="180"/>
+        <element name="Book_User" positionX="-0" positionY="117" width="117" height="103"/>
+    </elements>
+</model>
